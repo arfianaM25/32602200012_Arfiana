@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="/profile" method="POST" >
-    <label for="fruit">Nama-Nama Buah :</label>
-		<select name="nama_buah" id="fruit" size="2" multiple>
-			<option value="1">Apel</option>
-			<option value="2">Mangga</option>
-			<option value="3">Jeruk</option>
-			<option value="4">Pepaya</option>
-		</select>
-        <br>
-		<label for="alamat">Nama Mahasiswa:</label>
-		<input type="text" id="alamat" name="nama_mahasiswa"><br>
-		
-		<label for="sandi">Password :</label>
-		<input type="password" id="sandi"><br>
+<?= $this->extend('Layout/layout') ?>
+<?= $this->section('content') ?>
 
-		<label for="checkbox">Checkbox :</label>
-		<input type="checkbox" id="vehicle1" name="vehicle1" value="makan">
-		<label for="vehicle1">Saya sedang makan</label><br>
-    </form>
-</body>
-</html>
+<h2>Profil Saya</h2>
+<table class="profile-table">
+    <tr>
+        <th>Nama</th>
+        <td>Arfiana Maulidiyah</td>
+    </tr>
+    <tr>
+        <th>Umur</th>
+        <td>19 Tahun</td>
+    </tr>
+    <tr>
+        <th>Fakultas</th>
+        <td>Teknologi Industri</td>
+    </tr>
+</table>
+
+<h2>Keahlian</h2>
+<ul class="skills-list">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>PHP</li>
+    <li>Adobe Premier</li>
+    <li>Adobe Ilustrator</li>
+    <li>Adobe After Effect</li>
+</ul>
+
+<?= $this->endSection() ?>
